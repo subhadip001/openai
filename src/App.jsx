@@ -68,7 +68,6 @@ const App = () => {
               setPrompt(e.target[0].value);
               setSize(e.currentTarget.elements.size.value);
               setLoading(true);
-              console.log(e.currentTarget.elements.size.value);
             }}
           >
             <div className="image-desc">

@@ -59,9 +59,8 @@ body {
 
             @include mobile {
                 flex-direction: column;
-                height: auto;
                 gap: 20px;
-
+                height: auto;
             }
 
             .left {
@@ -201,6 +200,7 @@ body {
                 width: 45vw;
                 height: 100%;
                 border-radius: 0 12px 12px 0;
+                padding: 10px 0;
                 
                 @include tablet {
                     width: 50%;
@@ -210,7 +210,7 @@ body {
                 @include mobile {
                     width: 100%;
                     border-radius: 12px;
-                    min-height: 80vh;
+                    min-height: 50vh;
                 }
                 
 

@@ -3,15 +3,28 @@
 
 body {
 
-    background: url(../public/background1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background: linear-gradient(71deg,#0066ff,#7800ee,#00eea2,#1700ee,#ee007d);
+    background-size: 360% 360%;
+    animation: gradient-animation 30s ease infinite;
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+    
+        50% {
+            background-position: 100% 50%;
+        }
+    
+        100% {
+            background-position: 0% 50%;
+        }
+    }
     ::-webkit-scrollbar {
         width: 12px;
         height: 12px;
         background-color: #0b0b0b;
         border-radius: 12px;
+
         @include mobile {
             display: none;
         }
@@ -35,12 +48,13 @@ body {
 
         h1 {
 
-            font-weight: 700;
+            font-weight: 500;
             font-size: 3rem;
             text-align: center;
             display: block;
-            color: #ffffffd4;
-            text-shadow: -4px 0px 10px rgba(0, 0, 0, 0.721);
+            color: #f0f0f0d2;
+            //mix-blend-mode:multiply;
+
 
             @include mobile {
                 font-size: 1.5rem;
@@ -57,7 +71,7 @@ body {
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
-            
+
 
             @include mobile {
                 flex-direction: column;
@@ -73,17 +87,18 @@ body {
                 height: 100%;
                 flex-direction: column;
                 border-radius: 12px 0 0 12px;
-                
+
                 @include tablet {
                     width: 50%;
                     border-radius: 12px 0 0 12px;
 
                 }
+
                 @include mobile {
                     width: 90vw;
                     border-radius: 12px;
                 }
-                
+
 
                 form {
 
@@ -101,8 +116,8 @@ body {
                     @include tablet {
                         width: 90%;
                         border-radius: 10px;
-                        margin:20px auto;
-    
+                        margin: 20px auto;
+
                     }
 
                     @include mobile {
@@ -147,12 +162,12 @@ body {
                                     margin-left: 0;
                                 }
 
-                                @include mobile{
-                                    &:nth-of-type(2){
+                                @include mobile {
+                                    &:nth-of-type(2) {
                                         margin-left: 35px;
                                     }
                                 }
-                                
+
                             }
                         }
 
@@ -182,13 +197,14 @@ body {
                     color: #d1d1d1;
                     overflow-y: scroll;
                     border-radius: 6px;
-                    
+
                     @include tablet {
                         width: 90%;
                         border-radius: 10px;
-                        margin:20px auto;
-    
+                        margin: 20px auto;
+
                     }
+
                     @include mobile {
                         display: none;
                         width: 90%;
@@ -207,18 +223,19 @@ body {
                 height: 100%;
                 border-radius: 0 12px 12px 0;
                 padding: 10px 0;
-                
+
                 @include tablet {
                     width: 50%;
                     border-radius: 0 12px 12px 0;
 
                 }
+
                 @include mobile {
                     width: 100%;
                     border-radius: 12px;
                     min-height: 50vh;
                 }
-                
+
 
                 .loading {
 
@@ -282,3 +299,4 @@ body {
     }
 
 }
+

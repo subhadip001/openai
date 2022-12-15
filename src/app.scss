@@ -12,6 +12,9 @@ body {
         height: 12px;
         background-color: #0b0b0b;
         border-radius: 12px;
+        @include mobile {
+            display: none;
+        }
     }
 
     ::-webkit-scrollbar-thumb {

@@ -26,7 +26,7 @@ const App = () => {
     const getData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/openai/generateimage",
+          "https://imagecreatorapi.onrender.com/openai/generateimage",
           options
         );
         if (!response.ok) {

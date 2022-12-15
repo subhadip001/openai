@@ -7,7 +7,7 @@ import "./app.scss";
 //React Strict Mode renders components Twice
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
+  <React.StrictMode>
     <App />
-  </>
+  </React.StrictMode>
 );

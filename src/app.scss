@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+@import "./index.scss";
+
+body {
+
+    background: url(background3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        background-color: #f1f1f1;
+        border-radius: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        border-radius: 12px;
+    }
+
+    #root {
+        background: transparent;
+        width: 90vw;
+        margin: auto;
+        min-height: 100vh;
+
+        h1 {
+
+            font-weight: 700;
+            font-size: 3rem;
+            text-align: center;
+            display: block;
+            // background: #FF0000;
+            // background: linear-gradient(to left, #FF0000 0%, #000000 80%);
+            // background-clip: text;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            color: #ffffffd4;
+            text-shadow: -4px 0px 10px rgba(0, 0, 0, 0.721);
+
+
+        }
+
+        .container {
+
+            display: flex;
+            border-radius: 12px;
+            height: 80vh;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            
+
+            @include mobile {
+                flex-direction: column;
+                height: auto;
+                gap: 20px;
+
+            }
+
+            .left {
+
+                background-color: #ba552d89;
+                display: flex;
+                width: 45vw;
+                height: 100%;
+                flex-direction: column;
+                border-radius: 12px 0 0 12px;
+                
+                @include tablet {
+                    width: 50%;
+                    border-radius: 12px 0 0 12px;
+
+                }
+                @include mobile {
+                    width: 90vw;
+                    border-radius: 12px;
+                }
+                
+
+                form {
+
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    width: 40vw;
+                    margin: 30px;
+                    padding: 20px;
+                    justify-content: flex-start;
+                    gap: 50px;
+                    border-radius: 6px;
+
+                    @include tablet {
+                        width: 90%;
+                        border-radius: 10px;
+                        margin:20px auto;
+    
+                    }
+
+                    @include mobile {
+                        width: 90%;
+                        margin: 15px auto;
+                        border-radius: 12px;
+                    }
+
+                    .image-desc {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        input[type="text"] {
+                            padding: 15px 7.5px;
+                            font-size: 1rem;
+                            outline: none;
+                            border: 1px solid rgb(104, 104, 104);
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .select-size {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .radios {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            input[type="radio"] {
+                                margin-left: 20px;
+                                margin-right: 5px;
+                                cursor: pointer;
+
+                                &:first-of-type {
+                                    margin-left: 0;
+                                }
+
+                                @include mobile{
+                                    &:nth-of-type(2){
+                                        margin-left: 35px;
+                                    }
+                                }
+                                
+                            }
+                        }
+
+                    }
+
+                    button {
+
+                        padding: 10px 0;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        outline: none;
+                        border: none;
+                        background-color: #d1d1d1;
+
+                        &:hover {
+                            background-color: #b3b3b3;
+                        }
+                    }
+                }
+
+                .info {
+                    width: 40vw;
+                    margin: 30px;
+                    padding: 10px;
+                    background-color: #fff;
+                    overflow-y: scroll;
+                    border-radius: 6px;
+                    
+                    @include tablet {
+                        width: 90%;
+                        border-radius: 10px;
+                        margin:20px auto;
+    
+                    }
+                    @include mobile {
+                        display: none;
+                        width: 90%;
+                        margin: 15px auto;
+                        border-radius: 12px;
+                    }
+                }
+
+            }
+
+            .right {
+
+                background-color: rgba(173, 216, 230, 0.584);
+                display: flex;
+                width: 45vw;
+                height: 100%;
+                border-radius: 0 12px 12px 0;
+                
+                @include tablet {
+                    width: 50%;
+                    border-radius: 0 12px 12px 0;
+
+                }
+                @include mobile {
+                    width: 100%;
+                    border-radius: 12px;
+                    min-height: 80vh;
+                }
+                
+
+                .loading {
+
+                    display: block;
+                    margin: auto;
+                }
+
+                .intro {
+
+                    display: block;
+                    margin: auto;
+                }
+
+                .error {
+
+                    display: block;
+                    margin: auto;
+                }
+
+                .image {
+                    overflow: scroll;
+                    display: flex;
+                    height: 95%;
+                    width: 95%;
+                    margin: auto;
+                    background-color: #f1f1f1;
+
+                    img {
+
+                        display: block;
+                        margin: auto;
+                    }
+                }
+
+
+            }
+        }
+
+        footer {
+
+            height: 5vh;
+            padding: 5px;
+            color: #fff;
+
+            @include mobile {
+                height: 10vh;
+            }
+
+            p {
+                margin-top: 5px;
+
+                a {
+                    color: #fff;
+                }
+
+                @include mobile {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+}

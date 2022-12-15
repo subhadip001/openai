@@ -77,7 +77,7 @@ const App = () => {
               <input
                 type="text"
                 id="text"
-                placeholder="Enter image description"
+                placeholder="Describe your imagination here..."
                 autoComplete="off"
                 required
               />
@@ -90,7 +90,7 @@ const App = () => {
                   id="small"
                   name="size"
                   onChange={(e) => {
-                    setSize(e.currentTarget.elements.size.value);
+                    setSize("small");
                   }}
                   value="small"
                 />
@@ -112,7 +112,10 @@ const App = () => {
             <h3>Disclaimer</h3>
             <br />
             <h4>Tip</h4>
-            <p>Click generate button again for same image description to get more variations</p>
+            <p>
+              Click generate button again for same image description to get more
+              variations
+            </p>
             <h4>Preventing Harmful Generations</h4>
             <p>
               We’ve limited the ability for DALL·E 2 to generate violent, hate,
@@ -133,19 +136,33 @@ const App = () => {
           </div>
         </div>
         <div className="right">
-          {loading && <div className="loading"><LoadingSpinner /></div>}
+          {loading && (
+            <div className="loading">
+              <LoadingSpinner />
+            </div>
+          )}
           {data == null && !error && !loading && (
             <div className="intro">Image will be shown here </div>
           )}
-          {!loading && error &&  (
+          {!loading && error && (
             <div className="error">{`The image cannot be generated - ${error}`}</div>
           )}
-          {data && !loading && <div className="image"> <img src={data.url} alt="image"></img></div>}
+          {data && !loading && (
+            <div className="image">
+              {" "}
+              <img src={data.url} alt="image"></img>
+            </div>
+          )}
         </div>
       </div>
       <footer>
         <p>Enjoy this tool</p>
-        <p>created by <a href="https://github.com/subhadip001" target="_blank">subhadip001</a></p>
+        <p>
+          created by{" "}
+          <a href="https://github.com/subhadip001" target="_blank">
+            subhadip001
+          </a>
+        </p>
       </footer>
     </>
   );

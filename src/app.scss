@@ -3,14 +3,14 @@
 
 body {
 
-    background: url(../public/background3.png);
+    background: url(../public/background1.png);
     background-repeat: no-repeat;
     background-size: cover;
 
     ::-webkit-scrollbar {
         width: 12px;
         height: 12px;
-        background-color: #f1f1f1;
+        background-color: #0b0b0b;
         border-radius: 12px;
     }
 
@@ -20,7 +20,7 @@ body {
     }
 
     ::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
+        background-color: #1f1f1f;
         border-radius: 12px;
     }
 
@@ -36,13 +36,12 @@ body {
             font-size: 3rem;
             text-align: center;
             display: block;
-            // background: #FF0000;
-            // background: linear-gradient(to left, #FF0000 0%, #000000 80%);
-            // background-clip: text;
-            // -webkit-background-clip: text;
-            // -webkit-text-fill-color: transparent;
             color: #ffffffd4;
             text-shadow: -4px 0px 10px rgba(0, 0, 0, 0.721);
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
 
 
         }
@@ -65,7 +64,7 @@ body {
 
             .left {
 
-                background-color: #ba552d89;
+                background-color: #13111C;
                 display: flex;
                 width: 45vw;
                 height: 100%;
@@ -85,7 +84,7 @@ body {
 
                 form {
 
-                    background-color: #fff;
+                    background-color: transparent;
                     display: flex;
                     flex-direction: column;
                     width: 40vw;
@@ -94,6 +93,7 @@ body {
                     justify-content: flex-start;
                     gap: 50px;
                     border-radius: 6px;
+                    color: #d6d6d6e0;
 
                     @include tablet {
                         width: 90%;
@@ -114,7 +114,9 @@ body {
                         gap: 10px;
 
                         input[type="text"] {
-                            padding: 15px 7.5px;
+                            background-color: #222129;
+                            color: #d1d1d1;
+                            padding: 15px 10px;
                             font-size: 1rem;
                             outline: none;
                             border: 1px solid rgb(104, 104, 104);
@@ -136,6 +138,7 @@ body {
                                 margin-left: 20px;
                                 margin-right: 5px;
                                 cursor: pointer;
+                                background-color: transparent;
 
                                 &:first-of-type {
                                     margin-left: 0;
@@ -170,10 +173,10 @@ body {
                 }
 
                 .info {
-                    width: 40vw;
-                    margin: 30px;
-                    padding: 10px;
-                    background-color: #fff;
+                    width: 38vw;
+                    margin: 20px auto;
+                    background-color: transparent;
+                    color: #d1d1d1;
                     overflow-y: scroll;
                     border-radius: 6px;
                     
